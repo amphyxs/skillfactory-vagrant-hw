@@ -65,7 +65,8 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
     #Requirements
-    sudo apt-get install -y make gcc libreadline6 libreadline6-dev zlib1g-dev bison
+    sudo apt update
+    sudo apt-get install -y make gcc libreadline6-dev zlib1g-dev bison
 
     #Download postgres
     wget https://ftp.postgresql.org/pub/source/v8.4.22/postgresql-8.4.22.tar.gz
